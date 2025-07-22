@@ -84,11 +84,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'wave': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+					'33%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'66%': { transform: 'translateY(-5px) rotate(-1deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'wave': 'wave 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'ocean-gradient': 'var(--gradient-ocean)',
+				'wave-gradient': 'var(--gradient-wave)',
+				'coffee-gradient': 'var(--gradient-coffee)'
+			},
+			boxShadow: {
+				'ocean': 'var(--shadow-ocean)',
+				'soft': 'var(--shadow-soft)',
+				'glow': 'var(--shadow-glow)'
 			}
 		}
 	},
