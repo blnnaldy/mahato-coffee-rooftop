@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahato Rooftop Coffee - 100% Kopi Arabika Premium</title>
+    <meta name="description" content="Nikmati pengalaman kopi arabika 100% terbaik dengan pemandangan kota yang menakjubkan di Mahato Rooftop Coffee, Palmerah Jakarta Barat">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-coffee"></i>
+                <span>Mahato Rooftop</span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#location" class="nav-link">Lokasi</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="src/assets/hero-rooftop.jpg" alt="Mahato Rooftop Coffee" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Floating Coffee Animations -->
+        <div class="floating-coffee coffee-1">
+            <i class="fas fa-coffee"></i>
+        </div>
+        <div class="floating-coffee coffee-2">
+            <i class="fas fa-coffee"></i>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                ☕ 100% Kopi Arabika Premium
+            </div>
+            
+            <h1 class="hero-title">
+                <span>Mahato</span>
+                <span class="hero-subtitle">Rooftop</span>
+            </h1>
+            
+            <p class="hero-description">
+                Nikmati pengalaman kopi arabika 100% terbaik dengan pemandangan kota yang menakjubkan di rooftop yang nyaman dan estetik
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-wave">Jelajahi Menu</button>
+                <button class="btn btn-coffee">Reservasi Sekarang</button>
+            </div>
+
+            <div class="hero-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Palmerah, Jakarta Barat</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-star"></i>
+                    <span>Rating 4.8/5</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>Buka Setiap Hari</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-badge">Tentang Kami</span>
+                    <h2 class="section-title">Passion for Perfect Coffee</h2>
+                    <p class="about-description">
+                        Mahato Rooftop Coffee hadir dengan komitmen memberikan pengalaman kopi arabika 100% premium yang tak terlupakan. Berlokasi di rooftop dengan pemandangan kota Jakarta yang memukau, kami menciptakan atmosfer yang sempurna untuk menikmati secangkir kopi berkualitas tinggi.
+                    </p>
+                    <p class="about-description">
+                        Setiap biji kopi dipilih dengan teliti dari perkebunan terbaik Indonesia, diproses dengan metode tradisional yang dipadukan dengan teknologi modern untuk menghasilkan cita rasa yang autentik dan kaya.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-seedling"></i>
+                            <div>
+                                <h4>100% Arabika Premium</h4>
+                                <p>Biji kopi pilihan dari perkebunan terbaik</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mountain"></i>
+                            <div>
+                                <h4>Rooftop Experience</h4>
+                                <p>Pemandangan kota yang menakjubkan</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Crafted with Love</h4>
+                                <p>Dibuat dengan penuh perhatian dan keahlian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="src/assets/interior.jpg" alt="Interior Mahato Rooftop Coffee">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Menu Spesial</span>
+                <h2 class="section-title">Cita Rasa Arabika Terbaik</h2>
+                <p class="section-description">Pilihan menu kopi arabika premium dengan berbagai varian rasa yang memanjakan lidah</p>
+            </div>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Semua Menu</button>
+                <button class="category-btn" data-category="coffee">Kopi</button>
+                <button class="category-btn" data-category="specialty">Specialty</button>
+                <button class="category-btn" data-category="food">Makanan</button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Americano">
+                        <div class="menu-overlay">
+                            <span class="popular-badge">Popular</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Americano Rooftop</h3>
+                        <p>Kopi arabika murni dengan ekstraksi sempurna, disajikan dengan pemandangan kota</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 35.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="specialty">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Cappuccino Premium">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Cappuccino Premium</h3>
+                        <p>Perpaduan espresso arabika dengan susu steamed yang creamy dan foam art yang indah</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 42.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="specialty">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Latte Signature">
+                        <div class="menu-overlay">
+                            <span class="signature-badge">Signature</span>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Latte Signature Mahato</h3>
+                        <p>Signature latte dengan resep rahasia dan latte art eksklusif dari Mahato Rooftop</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 48.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="food">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Croissant">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Croissant Butter</h3>
+                        <p>Croissant segar dengan butter premium, sempurna untuk menemani kopi arabika</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 25.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Cold Brew">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Cold Brew Rooftop</h3>
+                        <p>Kopi dingin dengan proses cold brew 24 jam menghasilkan rasa yang smooth dan less acidic</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 38.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="food">
+                    <div class="menu-image">
+                        <img src="src/assets/coffee-beans.jpg" alt="Cake">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Tiramisu Coffee</h3>
+                        <p>Tiramisu dengan sentuhan kopi arabika, dessert perfect untuk pecinta kopi</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 45.000</span>
+                            <button class="order-btn">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <span class="section-badge">Lokasi & Kontak</span>
+                    <h2 class="section-title">Temukan Kami</h2>
+                    <p class="location-description">
+                        Berlokasi strategis di Palmerah, Jakarta Barat dengan akses mudah dan pemandangan rooftop yang menakjubkan
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jl. Kyai H. Taisir No.2 B, RW.11, Palmerah<br>Kec. Palmerah, Kota Jakarta Barat<br>DKI Jakarta 11480</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Minggu: 07:00 - 22:00 WIB<br>Buka setiap hari termasuk hari libur</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Kontak</h4>
+                                <p>WhatsApp: +62 812-3456-7890<br>Instagram: @mahatorooftop</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>Parkir</h4>
+                                <p>Area parkir luas tersedia<br>Akses mudah dari jalan raya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-wave">
+                            <i class="fas fa-directions"></i>
+                            Lihat di Maps
+                        </button>
+                        <button class="btn btn-coffee">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Google Maps Integration</p>
+                        <small>Mahato Rooftop Coffee<br>Palmerah, Jakarta Barat</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <i class="fas fa-coffee"></i>
+                        <span>Mahato Rooftop</span>
+                    </div>
+                    <p>Pengalaman kopi arabika 100% premium dengan pemandangan kota yang menakjubkan di rooftop Jakarta Barat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#menu">Kopi Arabika</a></li>
+                        <li><a href="#menu">Specialty Coffee</a></li>
+                        <li><a href="#menu">Makanan</a></li>
+                        <li><a href="#menu">Dessert</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Informasi</h4>
+                    <ul>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#location">Lokasi</a></li>
+                        <li><a href="#">Reservasi</a></li>
+                        <li><a href="#">Event</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Palmerah, Jakarta Barat</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+62 812-3456-7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@mahatorooftop.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mahato Rooftop Coffee. Semua hak cipta dilindungi.</p>
+                <p>100% Kopi Arabika Premium • Rooftop Experience • Jakarta Barat</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
