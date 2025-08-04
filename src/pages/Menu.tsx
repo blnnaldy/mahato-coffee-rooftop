@@ -239,8 +239,10 @@ const Menu = () => {
           </div>
           
           <div className="mt-8">
-            <Button variant="secondary" size="lg" className="hover-scale">
-              Reservasi Sekarang
+            <Button variant="secondary" size="lg" className="hover-scale" asChild>
+              <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">
+                Reservasi Sekarang
+              </a>
             </Button>
           </div>
         </div>

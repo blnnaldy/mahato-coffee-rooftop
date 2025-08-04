@@ -32,8 +32,10 @@ const Header = () => {
               <MapPin className="w-4 h-4" />
               <span>Palmerah, Jakarta Barat</span>
             </div>
-            <Button variant="ocean" size="sm" className="hover-scale">
-              Reservasi
+            <Button variant="ocean" size="sm" className="hover-scale" asChild>
+              <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">
+                Reservasi
+              </a>
             </Button>
             <Button 
               variant="ghost" 
@@ -106,8 +108,10 @@ const Header = () => {
               </div>
               
               <div className="mt-8 space-y-4">
-                <Button variant="ocean" className="w-full">
-                  Reservasi Sekarang
+                <Button variant="ocean" className="w-full" asChild>
+                  <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">
+                    Reservasi Sekarang
+                  </a>
                 </Button>
                 <div className="text-center text-sm text-muted-foreground">
                   <p>📍 Palmerah, Jakarta Barat</p>

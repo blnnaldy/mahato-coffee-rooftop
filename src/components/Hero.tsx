@@ -44,8 +44,10 @@ const Hero = () => {
           <Button variant="wave" size="lg" className="px-8 py-6 text-lg">
             Jelajahi Menu
           </Button>
-          <Button variant="coffee" size="lg" className="px-8 py-6 text-lg">
-            Reservasi Sekarang
+          <Button variant="coffee" size="lg" className="px-8 py-6 text-lg" asChild>
+            <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">
+              Reservasi Sekarang
+            </a>
           </Button>
         </div>
 
