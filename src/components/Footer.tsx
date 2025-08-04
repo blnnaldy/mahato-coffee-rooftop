@@ -1,5 +1,6 @@
 import { Coffee, MapPin, Phone, Instagram, Facebook, Mail } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -56,11 +57,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Menu Utama</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="opacity-80 hover:opacity-100 transition-opacity story-link">Cerita Kami</a></li>
-              <li><a href="#menu" className="opacity-80 hover:opacity-100 transition-opacity story-link">Menu</a></li>
-              <li><a href="#location" className="opacity-80 hover:opacity-100 transition-opacity story-link">Outlet</a></li>
-              <li><a href="#events" className="opacity-80 hover:opacity-100 transition-opacity story-link">Event</a></li>
-              <li><a href="#partnership" className="opacity-80 hover:opacity-100 transition-opacity story-link">Kemitraan</a></li>
+              <li><Link to="/about" className="opacity-80 hover:opacity-100 transition-opacity story-link">Cerita Kami</Link></li>
+              <li><Link to="/menu" className="opacity-80 hover:opacity-100 transition-opacity story-link">Menu</Link></li>
+              <li><Link to="/location" className="opacity-80 hover:opacity-100 transition-opacity story-link">Outlet</Link></li>
+              <li><Link to="/events" className="opacity-80 hover:opacity-100 transition-opacity story-link">Event</Link></li>
+              <li><Link to="/partnership" className="opacity-80 hover:opacity-100 transition-opacity story-link">Kemitraan</Link></li>
             </ul>
           </div>
 
