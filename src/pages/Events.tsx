@@ -4,6 +4,10 @@ import { Calendar, Users, Music, Camera, Clock, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import eventImage from "@/assets/event-view5.jpg";
+import eventMusic from "@/assets/event-music.jpg";
+import eventMusic2 from "@/assets/event-music-2.jpg";
+import eventView1 from "@/assets/event-view1.jpg";
 
 const Events = () => {
   const upcomingEvents = [
@@ -126,6 +130,13 @@ const Events = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {upcomingEvents.map((event, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
+                <div className="aspect-video bg-muted overflow-hidden rounded-t-lg">
+                  <img 
+                    src={index === 0 ? eventImage : index === 1 ? eventMusic : eventMusic2} 
+                    alt={event.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <Badge variant="outline">{event.type}</Badge>

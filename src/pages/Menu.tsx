@@ -1,101 +1,234 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Coffee, Star, Leaf, Zap } from "lucide-react";
+import { Coffee, Star, Leaf, Zap, Filter } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Menu = () => {
-  const coffeeMenu = [
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const menuCategories = [
+    { id: "all", name: "All Menu", icon: <Coffee className="w-4 h-4" /> },
+    { id: "signature", name: "Signature Coffee Series", icon: <Star className="w-4 h-4" /> },
+    { id: "espresso", name: "Espresso Base", icon: <Coffee className="w-4 h-4" /> },
+    { id: "non-coffee", name: "Non Coffee", icon: <Leaf className="w-4 h-4" /> },
+    { id: "yogurt", name: "Yogurt Series", icon: <Zap className="w-4 h-4" /> },
+    { id: "tea", name: "Flavour Tea", icon: <Leaf className="w-4 h-4" /> },
+    { id: "bakmi", name: "Bakmi Series", icon: <Star className="w-4 h-4" /> }
+  ];
+
+  const menuItems = [
+    // Signature Coffee Series
     {
       name: "Mahato Signature Blend",
       price: "32.000",
       description: "Blend khusus dengan notes chocolate & caramel yang khas",
       category: "signature",
-      popular: true
+      popular: true,
+      image: "/placeholder.svg"
     },
     {
-      name: "Ethiopian Single Origin",
-      price: "38.000",
-      description: "Notes floral dan fruity dari dataran tinggi Ethiopia",
-      category: "single-origin",
-      popular: false
-    },
-    {
-      name: "Colombian Supremo",
+      name: "Mahato Special Roast",
       price: "35.000",
-      description: "Full body dengan rasa nutty dan hints of citrus",
-      category: "single-origin",
-      popular: true
+      description: "Single origin dengan karakteristik unik Mahato",
+      category: "signature",
+      popular: true,
+      image: "/placeholder.svg"
     },
     {
-      name: "Mahato Cold Brew",
-      price: "28.000",
-      description: "Smooth dan refreshing, diseduh dingin selama 12 jam",
-      category: "cold",
-      popular: false
+      name: "Mahato Premium Gold",
+      price: "42.000",
+      description: "Premium blend dengan finishing vanilla dan caramel",
+      category: "signature",
+      popular: false,
+      image: "/placeholder.svg"
     },
+
+    // Espresso Base
     {
-      name: "Espresso",
+      name: "Espresso Single",
       price: "25.000",
       description: "Shot ganda dengan crema yang sempurna",
       category: "espresso",
-      popular: false
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Espresso Double",
+      price: "30.000",
+      description: "Double shot untuk pengalaman kopi yang intens",
+      category: "espresso",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Americano",
+      price: "28.000",
+      description: "Espresso dengan air panas untuk rasa yang kuat",
+      category: "espresso",
+      popular: true,
+      image: "/placeholder.svg"
     },
     {
       name: "Cappuccino",
-      price: "30.000",
+      price: "32.000",
       description: "Kombinasi sempurna espresso dengan steamed milk",
-      category: "milk-based",
-      popular: true
-    }
-  ];
+      category: "espresso",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Caffe Latte",
+      price: "34.000",
+      description: "Smooth dan creamy dengan latte art yang indah",
+      category: "espresso",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Macchiato",
+      price: "30.000",
+      description: "Espresso dengan sentuhan foam susu yang lembut",
+      category: "espresso",
+      popular: false,
+      image: "/placeholder.svg"
+    },
 
-  const foodMenu = [
+    // Non Coffee
     {
-      name: "Croissant Butter",
-      price: "18.000",
-      description: "Croissant fresh dengan butter premium"
-    },
-    {
-      name: "Sandwich Club",
-      price: "45.000",
-      description: "Sandwich lengkap dengan chicken, lettuce, tomato"
-    },
-    {
-      name: "Pasta Aglio Olio",
-      price: "42.000",
-      description: "Pasta dengan olive oil, garlic, dan parsley"
-    },
-    {
-      name: "Cheese Cake",
-      price: "25.000",
-      description: "New York style cheesecake dengan berry sauce"
-    }
-  ];
-
-  const nonCoffeeMenu = [
-    {
-      name: "Hot Chocolate",
-      price: "26.000",
-      description: "Premium chocolate dengan whipped cream"
-    },
-    {
-      name: "Green Tea Latte",
+      name: "Hot Chocolate Premium",
       price: "28.000",
-      description: "Matcha premium dengan steamed milk"
+      description: "Premium chocolate dengan whipped cream dan marshmallow",
+      category: "non-coffee",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Matcha Latte",
+      price: "30.000",
+      description: "Matcha premium Jepang dengan steamed milk",
+      category: "non-coffee",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Chocolate Milkshake",
+      price: "35.000",
+      description: "Thick milkshake dengan coklat premium dan es krim",
+      category: "non-coffee",
+      popular: false,
+      image: "/placeholder.svg"
     },
     {
       name: "Fresh Orange Juice",
       price: "22.000",
-      description: "Jus jeruk segar tanpa pengawet"
+      description: "Jus jeruk segar tanpa pengawet",
+      category: "non-coffee",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+
+    // Yogurt Series
+    {
+      name: "Greek Yogurt Berry",
+      price: "32.000",
+      description: "Greek yogurt dengan mixed berry segar",
+      category: "yogurt",
+      popular: true,
+      image: "/placeholder.svg"
     },
     {
-      name: "Iced Tea",
-      price: "18.000",
-      description: "Es teh segar dengan lemon"
+      name: "Yogurt Granola Honey",
+      price: "35.000",
+      description: "Yogurt dengan granola dan madu alami",
+      category: "yogurt",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Tropical Yogurt Bowl",
+      price: "38.000",
+      description: "Yogurt dengan buah-buahan tropis segar",
+      category: "yogurt",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+
+    // Flavour Tea
+    {
+      name: "Earl Grey Premium",
+      price: "25.000",
+      description: "Earl Grey dengan bergamot oil yang harum",
+      category: "tea",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Jasmine Green Tea",
+      price: "24.000",
+      description: "Teh hijau dengan aroma melati yang menenangkan",
+      category: "tea",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Chamomile Honey",
+      price: "26.000",
+      description: "Teh chamomile dengan madu untuk relaksasi",
+      category: "tea",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Thai Tea Latte",
+      price: "30.000",
+      description: "Thai tea dengan susu kental manis",
+      category: "tea",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+
+    // Bakmi Series
+    {
+      name: "Bakmi Ayam Mahato",
+      price: "38.000",
+      description: "Bakmi ayam dengan bumbu khas Mahato",
+      category: "bakmi",
+      popular: true,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Bakmi Seafood",
+      price: "45.000",
+      description: "Bakmi dengan topping seafood segar",
+      category: "bakmi",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Bakmi Vegetarian",
+      price: "35.000",
+      description: "Bakmi dengan sayuran segar dan tahu tempe",
+      category: "bakmi",
+      popular: false,
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Bakmi Special Combo",
+      price: "52.000",
+      description: "Bakmi dengan kombinasi ayam, seafood dan sayuran",
+      category: "bakmi",
+      popular: true,
+      image: "/placeholder.svg"
     }
   ];
+
+  const filteredItems = selectedCategory === "all" 
+    ? menuItems 
+    : menuItems.filter(item => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen">
@@ -116,99 +249,87 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Coffee Menu Section */}
+      {/* Category Filter */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            {menuCategories.map((category) => (
+              <Button
+                key={category.id}
+                variant={selectedCategory === category.id ? "default" : "outline"}
+                className={`flex items-center gap-2 ${
+                  selectedCategory === category.id 
+                    ? "bg-primary text-primary-foreground" 
+                    : "hover:bg-primary/10"
+                }`}
+                onClick={() => setSelectedCategory(category.id)}
+              >
+                {category.icon}
+                {category.name}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Items Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Coffee className="w-16 h-16 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-primary mb-4">Kopi Premium</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              {menuCategories.find(cat => cat.id === selectedCategory)?.name || "All Menu"}
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              100% Arabika pilihan dari berbagai daerah dengan karakteristik unik
+              {selectedCategory === "all" && "Semua menu tersedia untuk Anda"}
+              {selectedCategory === "signature" && "Koleksi kopi signature khas Mahato"}
+              {selectedCategory === "espresso" && "Berbagai variasi espresso-based coffee"}
+              {selectedCategory === "non-coffee" && "Minuman segar tanpa kafein"}
+              {selectedCategory === "yogurt" && "Yogurt sehat dengan berbagai topping"}
+              {selectedCategory === "tea" && "Koleksi teh premium dengan rasa autentik"}
+              {selectedCategory === "bakmi" && "Bakmi dengan cita rasa khas Indonesia"}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coffeeMenu.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredItems.map((item, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative group">
                 {item.popular && (
-                  <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
+                  <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground z-10">
                     <Star className="w-3 h-3 mr-1" />
                     Popular
                   </Badge>
                 )}
-                <CardHeader>
+                
+                <div className="aspect-square bg-muted rounded-t-lg overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                <CardHeader className="pb-2">
                   <CardTitle className="flex justify-between items-start">
-                    <span className="text-lg">{item.name}</span>
+                    <span className="text-lg font-semibold text-foreground">{item.name}</span>
                     <span className="text-primary font-bold">Rp {item.price}</span>
                   </CardTitle>
                 </CardHeader>
+                
                 <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     {item.description}
                   </p>
-                  <div className="mt-4">
-                    <Badge variant="outline" className="text-xs">
-                      {item.category}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Food Menu Section */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Leaf className="w-16 h-16 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-primary mb-4">Makanan</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Hidangan segar dan lezat untuk melengkapi pengalaman kopi Anda
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {foodMenu.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{item.name}</CardTitle>
-                  <span className="text-primary font-bold">Rp {item.price}</span>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Non-Coffee Menu Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Zap className="w-16 h-16 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-primary mb-4">Minuman Non-Kopi</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Pilihan minuman segar untuk yang tidak mengonsumsi kopi
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {nonCoffeeMenu.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg">{item.name}</CardTitle>
-                  <span className="text-primary font-bold">Rp {item.price}</span>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.description}
-                  </p>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full hover:bg-primary hover:text-primary-foreground"
+                    asChild
+                  >
+                    <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">
+                      Pesan Sekarang
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}

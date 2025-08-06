@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { Coffee, Users, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import coffeeBeans from "@/assets/coffee-beans.jpg";
-import interior from "@/assets/interior.jpg";
+import aboutImage from "@/assets/about-outlet.jpg";
+import interiorImage from "@/assets/about-interior.jpg";
 
 const About = () => {
   return (
@@ -51,8 +51,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src={coffeeBeans} 
-                alt="Coffee beans" 
+                src={aboutImage} 
+                alt="Mahato Outlet" 
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
@@ -121,7 +121,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src={interior} 
+                src={interiorImage} 
                 alt="Mahato interior" 
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
               />

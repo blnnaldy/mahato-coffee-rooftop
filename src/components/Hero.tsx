@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Star, Coffee } from "lucide-react";
-import heroImage from "@/assets/mahato-rooftop-real.jpg";
+import heroImage from "@/assets/hero-banner-new.jpg";
 
 const Hero = () => {
   return (
@@ -41,8 +41,8 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <Button variant="wave" size="lg" className="px-8 py-6 text-lg">
-            Jelajahi Menu
+          <Button variant="wave" size="lg" className="px-8 py-6 text-lg" asChild>
+            <a href="/menu">Jelajahi Menu</a>
           </Button>
           <Button variant="coffee" size="lg" className="px-8 py-6 text-lg" asChild>
             <a href="https://wa.me/6282246239567" target="_blank" rel="noopener noreferrer">

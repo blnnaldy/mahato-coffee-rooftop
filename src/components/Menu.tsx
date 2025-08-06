@@ -110,8 +110,8 @@ const Menu = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="ocean" size="lg">
-            Lihat Menu Lengkap
+          <Button variant="ocean" size="lg" asChild>
+            <a href="/menu">Lihat Menu Lengkap</a>
           </Button>
         </div>
       </div>

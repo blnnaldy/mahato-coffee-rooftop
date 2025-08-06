@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, MapPin, Phone, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import mahatoLogo from "@/assets/mahato-logo.png";
+import mahatoLogo from "@/assets/mahato-logo-new.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
