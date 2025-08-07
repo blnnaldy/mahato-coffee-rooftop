@@ -234,8 +234,21 @@ const Menu = () => {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/10 to-background">
+      {/* Hero Section with Image */}
+      <section className="pt-24 pb-0">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <img 
+              src="/src/assets/menu-header.png" 
+              alt="Menu Header" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Title Section */}
+      <section className="py-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
