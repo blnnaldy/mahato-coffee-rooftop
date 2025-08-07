@@ -190,15 +190,38 @@ const Location = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8659087775247!2d106.79089!3d-6.155556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7a6e5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sJl.%20Kyai%20H.%20Taisir%20No.2B%2C%20Palmerah%2C%20Jakarta%20Barat!5e0!3m2!1sen!2sid!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.426!2d106.7907!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f158e3b6b7b7%3A0x9f8b7a1b3e3e3e3e!2sJl.%20Kyai%20H.%20Taisir%20No.2%20B%2C%20RT.3%2FRW.11%2C%20Palmerah%2C%20Kec.%20Palmerah%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011480!5e0!3m2!1sen!2sid!4v1692345678901!5m2!1sen!2sid"
                 width="100%"
-                height="400"
+                height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Mahato Coffee Location"
+                title="Mahato Coffee Location - Jl. Kyai H. Taisir No.2 B, Palmerah, Jakarta Barat"
               />
+            </div>
+            
+            {/* Map Controls */}
+            <div className="flex justify-center mt-6 gap-4">
+              <Button variant="outline" size="sm" asChild>
+                <a 
+                  href="https://maps.google.com/?q=Jl.+Kyai+H.+Taisir+No.2+B,+RT.3/RW.11,+Palmerah,+Jakarta+Barat+11480" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Buka di Google Maps
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a 
+                  href="https://goo.gl/maps/EXAMPLE" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Dapatkan Petunjuk Arah
+                </a>
+              </Button>
             </div>
           </div>
         </div>
