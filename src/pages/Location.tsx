@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { MapPin, Clock, Phone, Car, Train, Bus, Wifi, AirVent, Utensils } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,11 @@ const Location = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Lokasi"
+        description="Temukan kami di Palmerah, Jakarta Barat. Lihat peta, jam operasional, dan panduan transportasi untuk mengunjungi Mahato Coffee Rooftop."
+        keywords="lokasi mahato, alamat mahato, peta mahato, jam buka, coffee shop palmerah"
+      />
       <Header />
       
       {/* Hero Section */}

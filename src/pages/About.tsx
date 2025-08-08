@@ -5,10 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import aboutImage from "@/assets/about-outlet.jpg";
 import interiorImage from "@/assets/about-interior.jpg";
+import Seo from "@/components/Seo";
 
 const About = () => {
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Tentang Kami"
+        description="Pelajari lebih lanjut tentang Mahato Coffee Rooftop. Cerita kami, nilai-nilai kami, dan komitmen kami untuk menyajikan kopi arabika premium terbaik di Jakarta."
+        keywords="tentang mahato, cerita mahato, visi mahato, kopi arabika, coffee shop jakarta"
+      />
       <Header />
       
       {/* Hero Section */}
@@ -52,7 +58,7 @@ const About = () => {
             <div className="relative">
               <img 
                 src={aboutImage} 
-                alt="Mahato Outlet" 
+                alt="Tampilan luar Mahato Coffee Rooftop pada malam hari"
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
@@ -122,7 +128,7 @@ const About = () => {
             <div className="relative">
               <img 
                 src={interiorImage} 
-                alt="Mahato interior" 
+                alt="Suasana interior Mahato Coffee yang modern dan hangat dengan tempat duduk yang nyaman"
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>

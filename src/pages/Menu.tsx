@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { Coffee, Star, Leaf, Zap, Filter } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -232,6 +233,11 @@ const Menu = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title="Menu"
+        description="Jelajahi menu lengkap kami di Mahato Coffee Rooftop. Dari kopi signature, espresso, non-kopi, hingga makanan lezat seperti Bakmi Series."
+        keywords="menu mahato, harga kopi mahato, menu kopi, menu makanan, bakmi, non-kopi"
+      />
       <Header />
       
       {/* Hero Section with Image */}
