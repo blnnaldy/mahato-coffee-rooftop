@@ -10,9 +10,15 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <About />
-      <Menu />
-      <Location />
+      <div data-aos="fade-up">
+        <About />
+      </div>
+      <div data-aos="fade-up">
+        <Menu />
+      </div>
+      <div data-aos="fade-up">
+        <Location />
+      </div>
       <Footer />
     </div>
   );
