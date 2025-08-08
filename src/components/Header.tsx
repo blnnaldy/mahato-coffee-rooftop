@@ -42,6 +42,7 @@ const Header = () => {
               size="icon" 
               className="md:hidden hover-scale"
               onClick={() => setIsMenuOpen(true)}
+              aria-label="Buka menu"
             >
               <Menu className="w-5 h-5" />
             </Button>
@@ -63,6 +64,7 @@ const Header = () => {
                 variant="ghost" 
                 size="icon"
                 onClick={() => setIsMenuOpen(false)}
+                aria-label="Tutup menu"
               >
                 <X className="w-5 h-5" />
               </Button>

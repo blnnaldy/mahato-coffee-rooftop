@@ -248,6 +248,7 @@ const Menu = () => {
               src="/src/assets/menu-header.png" 
               alt="Menu Header" 
               className="w-full h-auto rounded-lg shadow-lg"
+              loading="lazy"
             />
           </div>
         </div>
@@ -324,6 +325,7 @@ const Menu = () => {
                     src={item.image} 
                     alt={item.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 

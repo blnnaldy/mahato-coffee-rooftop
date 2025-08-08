@@ -60,6 +60,7 @@ const About = () => {
                 src={aboutImage} 
                 alt="Tampilan luar Mahato Coffee Rooftop pada malam hari"
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
             </div>
@@ -130,6 +131,7 @@ const About = () => {
                 src={interiorImage} 
                 alt="Suasana interior Mahato Coffee yang modern dan hangat dengan tempat duduk yang nyaman"
                 className="rounded-2xl shadow-2xl w-full object-cover h-80"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
             </div>

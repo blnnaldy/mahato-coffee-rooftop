@@ -39,6 +39,7 @@ const Location = () => {
         title="Lokasi"
         description="Temukan kami di Palmerah, Jakarta Barat. Lihat peta, jam operasional, dan panduan transportasi untuk mengunjungi Mahato Coffee Rooftop."
         keywords="lokasi mahato, alamat mahato, peta mahato, jam buka, coffee shop palmerah"
+        addBusinessSchema={true}
       />
       <Header />
       
@@ -124,6 +125,7 @@ const Location = () => {
                 src={mahatoRooftop} 
                 alt="Mahato Coffee location" 
                 className="rounded-2xl shadow-2xl w-full object-cover h-96"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-2xl"></div>
             </div>
